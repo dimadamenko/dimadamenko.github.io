@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – GrowDay</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #fafafa; color: #1a1a1a; line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+    .header { margin-bottom: 40px; }
+    h1 { font-size: 32px; font-weight: 700; margin-bottom: 4px; color: #1D9E75; }
+    .tagline { color: #888; font-size: 15px; }
+    h2 { font-size: 20px; font-weight: 600; margin: 40px 0 16px; color: #1a1a1a; }
+    .faq { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; }
+    .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 18px 20px; font-size: 15px; font-weight: 600; color: #1a1a1a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: inherit; }
+    .faq-question:hover { background: #f9f9f9; }
+    .faq-answer { padding: 0 20px 18px; font-size: 14px; color: #444; line-height: 1.7; }
+    .faq-answer ol, .faq-answer ul { margin: 8px 0 4px 18px; }
+    .faq-answer li { margin-bottom: 4px; }
+    .chevron { font-size: 11px; color: #aaa; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .chevron { transform: rotate(180deg); }
+    .faq-item:not(.open) .faq-answer { display: none; }
+    .contact-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 24px; margin-top: 16px; }
+    .contact-card p { color: #444; font-size: 15px; margin-bottom: 16px; }
+    .contact-card a.email-btn { display: inline-block; background: #1D9E75; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 10px; font-size: 15px; font-weight: 600; }
+    .contact-card a.email-btn:hover { background: #179066; }
+    a { color: #1D9E75; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; font-size: 13px; color: #aaa; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+    .footer-links { display: flex; gap: 16px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1>GrowDay Support</h1>
+      <p class="tagline">Your daily parenting guide — we're here to help.</p>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+
+      <div class="faq-item open">
+        <button class="faq-question" onclick="toggle(this)">
+          How do I cancel my subscription?
+          <span class="chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>GrowDay subscriptions are managed by Apple through the App Store. To cancel:</p>
+          <ol>
+            <li>Open the <strong>Settings</strong> app on your iPhone</li>
+            <li>Tap your name at the top, then tap <strong>Subscriptions</strong></li>
+            <li>Find <strong>GrowDay</strong> and tap it</li>
+            <li>Tap <strong>Cancel Subscription</strong></li>
+          </ol>
+          <p style="margin-top:10px;">You can also manage subscriptions directly in the App Store → your profile icon → Subscriptions. Your access will continue until the end of the current billing period.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">
+          How do I restore my purchase on a new device?
+          <span class="chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>If you've switched to a new device or reinstalled the app:</p>
+          <ol>
+            <li>Open GrowDay and sign in with the same account you used when you subscribed</li>
+            <li>If the paywall appears, tap <strong>Restore purchases</strong> at the bottom of the screen</li>
+          </ol>
+          <p style="margin-top:10px;">Make sure you're signed into the same Apple ID or email account that was used for the original purchase. If you're still having trouble, contact us below.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">
+          How do I delete my account?
+          <span class="chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>You can permanently delete your account and all associated data directly from the app:</p>
+          <ol>
+            <li>Open GrowDay and go to <strong>My Account</strong> (tap your profile icon)</li>
+            <li>Scroll down and tap <strong>Delete Account</strong></li>
+            <li>Confirm when prompted</li>
+          </ol>
+          <p style="margin-top:10px;">This will permanently remove your account, baby profile, activity history, and milestone progress. This action cannot be undone. Note that deleting your account does not automatically cancel your subscription — please cancel it separately in Settings.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">
+          How do I change my baby's information?
+          <span class="chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>To update your baby's name, date of birth, birth week, or gender:</p>
+          <ol>
+            <li>Open GrowDay and go to <strong>My Account</strong> (tap your profile icon)</li>
+            <li>Tap <strong>Edit My Info</strong></li>
+            <li>Update the details and tap <strong>Save</strong></li>
+          </ol>
+          <p style="margin-top:10px;">The app will immediately recalculate your baby's age-appropriate activities and milestones based on the updated information.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Contact Us</h2>
+    <div class="contact-card">
+      <p>Can't find what you're looking for? We usually respond within 1–2 business days.</p>
+      <a href="mailto:support@growday.app" class="email-btn">support@growday.app</a>
+    </div>
+
+    <div class="footer">
+      <span>© 2025 GrowDay. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggle(btn) {
+      const item = btn.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
